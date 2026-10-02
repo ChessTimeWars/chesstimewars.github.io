@@ -2,9 +2,9 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
-- Website: https://pquilty79.github.io/timewars-site/
-- Support: https://pquilty79.github.io/timewars-site/support.html
-- Privacy: https://pquilty79.github.io/timewars-site/privacy.html
+- Website: https://chesstimewars.github.io/
+- Support: https://chesstimewars.github.io/support.html
+- Privacy: https://chesstimewars.github.io/privacy.html
 - Contact: supportchesstimewars@gmail.com
 
 Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve locally with `python3 -m http.server 4173`. GitHub Pages publishes the default branch root.
