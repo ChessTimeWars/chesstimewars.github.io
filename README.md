@@ -9,6 +9,10 @@ Public information, support, and privacy pages only. No game source, keys, payme
 
 Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve locally with `python3 -m http.server 4173`. GitHub Pages publishes the default branch root.
 
+## Screenshot provenance
+
+- `assets/gameplay-2026-10-03.png`: captured from the current app on October 3, 2026 using `MarketingScreenshotsTests.testCaptureCurrentGameplayAndTutorialForWebsite` (app commit `a2a7dde`). Shows the corrected opponent battery placement above the capture tray. The dated filename prevents cached copies of the old screenshot from being reused.
+
 ## Release checklist
 
 - Owner reviews privacy policy against the final SDK configuration and App Store privacy disclosures.
