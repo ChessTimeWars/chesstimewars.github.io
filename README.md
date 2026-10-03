@@ -20,3 +20,11 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 - Screenshots are real development-build captures; refresh them when UI changes.
 - All upgrades stay inside Apple's in-app purchase flow, not on this website.
 - Artwork and screenshots are provided for this game's promotional site; no open-source license is granted to game assets.
+
+## October 3 launch refresh
+
+- Public release window: October 26-30, 2026. Keep this a planned window until the App Store release is confirmed.
+- Public copy is player-facing, not beta/testing instructions; no board-resize advertising FAQ.
+- Discreet homepage credits acknowledge Patrick Quilty and Winter Quilty with the owner-provided kitchen-table line.
+- app-ads.txt authorizes the verified AdMob publisher. The App Store Marketing URL must remain the branded root URL for discovery after publication.
+- Home, support, privacy, Credits navigation and FAQ expansion checked in the browser. Layout checked at 1280px, 390px and 320px; no horizontal overflow.
