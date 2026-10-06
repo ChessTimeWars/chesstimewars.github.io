@@ -21,6 +21,14 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 - All upgrades stay inside Apple's in-app purchase flow, not on this website.
 - Artwork and screenshots are provided for this game's promotional site; no open-source license is granted to game assets.
 
+## Gameplay videos (October 6, 2026)
+
+- `/#gameplay-videos` contains three approved, real-gameplay clips, one for each ruleset. The hero, navigation and support essentials link to this section.
+- `assets/videos/*.mp4` are compressed 1080x1920 website exports (about 4.5 MB total). The high-bitrate 886x1920 App Store originals remain in the private app project's `Release/AppPreview/Rulesets/` directory.
+- Each native player has controls, inline playback, a real-footage poster, `preload="none"`, and no autoplay. No third-party video hosting, scripts, cookies or analytics were added.
+- English WebVTT captions include the on-screen explanations and sound cues. Captions are also burned into the footage so the videos remain understandable muted.
+- Forward Time is labeled as free; Causal Collapse and Alternate Realities are optional in-app unlocks. The release window and all existing purchase/privacy disclosures are unchanged.
+
 ## October 3 launch refresh
 
 - Public release window: October 26-30, 2026. Keep this a planned window until the App Store release is confirmed.
