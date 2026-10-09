@@ -2,6 +2,17 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Android Announcement - October 9, 2026
+
+- The homepage introduction and launch section now say "Android coming soon."
+- Android is in development, with no announced release date or Google Play link.
+- The support FAQ and shared footer repeat the announcement and distinguish it
+  from the Apple launch window. Search/social descriptions also mention Android.
+- The planned October 26-30, 2026 Apple launch window, gameplay videos, purchase
+  details, and privacy policy body are unchanged.
+- WebKit checks passed at 1280px, 390px, and 320px, including enlarged Android
+  announcement text, working FAQ expansion, and no horizontal overflow.
+
 - Website: https://chesstimewars.github.io/
 - Support: https://chesstimewars.github.io/support.html
 - Privacy: https://chesstimewars.github.io/privacy.html
