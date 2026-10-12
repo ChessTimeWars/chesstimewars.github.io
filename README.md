@@ -2,6 +2,23 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Current Launch Message - October 12, 2026
+
+- Owner-approved public wording is "Coming Autumn 2026," with no specific day
+  or October launch window. Android retains its separate "Coming Soon" notice.
+- Updated the homepage hero/closing, search/social descriptions, all three
+  page footers and the support FAQ. Privacy-policy revision dates and copyright
+  years are not launch promises and are preserved.
+- Gameplay videos, screenshots, purchase/privacy disclosures and Credits are
+  unchanged. Older dated entries below are historical, not the current schedule.
+- App Store review and its saved pre-order settings are not modified by this
+  website update. After approval, confirm the actual availability/release setting
+  with the owner before announcing public downloads or adding a store link.
+- Validation: all three HTML pages' assets/internal anchors resolve; no old
+  fixed launch window remains in the public pages or homepage metadata. Browser
+  checks passed at 1280px, 390px and 320px without horizontal overflow; the new
+  download FAQ expands correctly. All three videos and approved Credits remain.
+
 ## Android Announcement - October 9, 2026
 
 - The homepage introduction and launch section now say "Android coming soon."
@@ -27,7 +44,7 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 ## Release checklist
 
 - Owner reviews privacy policy against the final SDK configuration and App Store privacy disclosures.
-- Replace Coming Soon only after an actual public release; then add the verified App Store link.
+- Replace pre-launch wording only after an actual public release; then add the verified App Store link.
 - Screenshots are real development-build captures; refresh them when UI changes.
 - All upgrades stay inside Apple's in-app purchase flow, not on this website.
 - Artwork and screenshots are provided for this game's promotional site; no open-source license is granted to game assets.
