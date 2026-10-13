@@ -64,3 +64,11 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 - Discreet homepage credits acknowledge Patrick Quilty and Winter Quilty with the owner-provided kitchen-table line.
 - app-ads.txt authorizes the verified AdMob publisher. The App Store Marketing URL must remain the branded root URL for discovery after publication.
 - Home, support, privacy, Credits navigation and FAQ expansion checked in the browser. Layout checked at 1280px, 390px and 320px; no horizontal overflow.
+
+## Account & Data Deletion - October 13, 2026
+
+- Added `account-deletion.html` with a prominent email request button and instructions that do not require reinstalling. The existing approved support mailbox is used; no message was sent by the test.
+- Clearly distinguishes account-free offline Android beta/device records, support correspondence, Apple-held data and locally tested future multiplayer. No public sign-up, guardian form, automatic deletion endpoint, analytics or data collection was added.
+- Users are warned never to email passwords, private deletion keys, verification codes, identity documents or child personal details. Email/UID/invite alone is not ownership proof.
+- Linked the page from all shared footers, support privacy FAQ and privacy retention section. Actual Apple/Android data-practice disclosures remain unchanged.
+- Four-page asset/anchor checks pass; browser checks at 1280, 390 and 320 pixels show no horizontal overflow. The deletion button uses readable dark text on gold; no email was opened or submitted.
