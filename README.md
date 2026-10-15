@@ -2,6 +2,33 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Support and Privacy Publication - October 15, 2026
+
+- Owner approved the shared Apple/Android support, complaints, privacy and
+  deletion-page wording, including the targets to acknowledge complaints within
+  24 hours and aim to resolve them within 15 calendar days. Longer investigations
+  require an explanation/update; statutory rights and shorter legal deadlines
+  are preserved. These are service targets, not a newly activated autoresponder.
+- Added `support.html#complaints` and `support.html#india-support`, broader
+  device/platform bug-report instructions and the approved Infinity FAQ correction.
+- Added `privacy.html#india-privacy` and `privacy.html#children`, accurately
+  separating current Apple services, offline Android and adult-only optional
+  Android commerce tests. Existing Apple services/ads and Android commerce
+  disclosure blocks are preserved byte-for-byte; both Android anchors remain.
+- Added `account-deletion.html#privacy-requests`. No form, account service,
+  identity-document intake, automatic deletion endpoint, analytics or paid
+  dependency was introduced. App/game source and country/billing/review settings
+  are not part of this website-only publication.
+- Validation: HTML structure, unique IDs and all 88 local links/assets/anchors
+  across four pages pass. All three changed pages were checked in the browser
+  at 320px, 390px and 1280px without horizontal overflow. Infinity FAQ expansion
+  works. No browser console errors were observed. Homepage, styles, screenshots,
+  videos, credits and app-ads.txt are unchanged.
+- Default-branch push publishes through the existing GitHub Pages setup. Verify
+  the three public responses against the committed files before claiming the
+  updated policy is live. Private approval and legal-readiness notes are kept
+  outside this public website repository.
+
 ## Current Launch Message - October 12, 2026
 
 - Owner-approved public wording is "Coming Autumn 2026," with no specific day
