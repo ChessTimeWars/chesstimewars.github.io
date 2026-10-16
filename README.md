@@ -2,6 +2,26 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## App Store Launch - October 15, 2026
+
+- Owner confirmed launch; Apple's public US lookup also returned Chess: Time Wars,
+  app ID 6818296008, version 1.0 and price $0 on October 15. The public product
+  page returned HTTP 200. This is public listing evidence, not an App Store
+  Connect/build-number or every-country availability claim.
+- Homepage hero/closing and shared footers now say available now, with direct
+  App Store download links. Search/social descriptions and support FAQs match.
+  Android remains coming soon, with no invented release date or public beta link.
+- Apple advertising disclosure moved to present tense without changing the
+  approved data practices. Android privacy/commerce/deletion disclosures and
+  complaint targets remain intact. No ad campaign, account, analytics, store
+  settings, game source, price or purchase processing was changed.
+- This section supersedes earlier pre-launch copy instructions below. Actual
+  gameplay videos, screenshots, credits and app-ads.txt remain unchanged.
+- Validation: all four pages at 320, 390, 768 and 1280px show no horizontal
+  overflow or clipped download controls; the support download FAQ opens and no
+  browser page errors occurred. All 79 local references/fragments and unique IDs
+  pass. Android beta/commerce disclosure sections remain byte-for-byte unchanged.
+
 ## Support and Privacy Publication - October 15, 2026
 
 - Owner approved the shared Apple/Android support, complaints, privacy and
@@ -29,7 +49,7 @@ Public information, support, and privacy pages only. No game source, keys, payme
   updated policy is live. Private approval and legal-readiness notes are kept
   outside this public website repository.
 
-## Current Launch Message - October 12, 2026
+## Historical Launch Message - October 12, 2026
 
 - Owner-approved public wording is "Coming Autumn 2026," with no specific day
   or October launch window. Android retains its separate "Coming Soon" notice.
@@ -71,7 +91,7 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 ## Release checklist
 
 - Owner reviews privacy policy against the final SDK configuration and App Store privacy disclosures.
-- Replace pre-launch wording only after an actual public release; then add the verified App Store link.
+- Keep the verified App Store download link current; do not imply availability in every country or announce an Android release before it is confirmed.
 - Screenshots are real development-build captures; refresh them when UI changes.
 - All upgrades stay inside Apple's in-app purchase flow, not on this website.
 - Artwork and screenshots are provided for this game's promotional site; no open-source license is granted to game assets.

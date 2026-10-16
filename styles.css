@@ -6,3 +6,6 @@
 .platform-note{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;max-width:420px;margin:24px 0 0}.platform-badge{display:inline-block;padding:6px 11px;border:1px solid #e4bc7266;border-radius:4px;background:linear-gradient(120deg,#e4bc7212,transparent);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}.platform-detail{font-size:12px;line-height:1.5;color:var(--muted)}.platform-note-centered{justify-content:center;max-width:640px;margin:22px auto 8px}
 
 .document a.deletion-request{color:var(--bg)}
+
+/* Keep the App Store call to action inside narrow phone layouts. */
+.app-store-link{max-width:100%;gap:14px;box-sizing:border-box;text-align:center}.download-note{font-size:12px;color:var(--muted);margin:0 0 16px}
