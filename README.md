@@ -119,3 +119,25 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 - Users are warned never to email passwords, private deletion keys, verification codes, identity documents or child personal details. Email/UID/invite alone is not ownership proof.
 - Linked the page from all shared footers, support privacy FAQ and privacy retention section. Actual Apple/Android data-practice disclosures remain unchanged.
 - Four-page asset/anchor checks pass; browser checks at 1280, 390 and 320 pixels show no horizontal overflow. The deletion button uses readable dark text on gold; no email was opened or submitted.
+
+## Optional Android Online Privacy - October 16, 2026
+
+Owner approved the online privacy/deletion update. Added the optional adult-only
+Google/Firebase friend-match policy, actual operational/audit retention, Play
+Integrity verification and whole-match/deletion cleanup distinctions. Apple
+services/privacy text is byte-for-byte unchanged. Offline and commerce builds
+retain their separate behavior; this website update does not release an app.
+
+The external deletion page supports an explicit HTTPS request using the private
+ownership key generated in the app, plus private receipt-status checking. No
+request occurs on page load, no secret goes in a URL/browser storage or email,
+and no third-party browser SDK/analytics was added. Destruction requires a valid
+key plus an explicit consequence checkbox. Lost responses preserve retry identity
+and the precomputed private receipt; pending is never displayed as completed.
+
+Seven Node transport/UI-state unit tests pass with injected requests, plus
+four-page local link/asset checks and browser rendering. These tests never erase
+a real account. Real-account provider erasure/revocation remains a separate
+controlled manual beta check. The existing support email route is preserved for
+people without a saved private key. Run tests with Node 24:
+`node --test Tests/external-deletion.test.mjs`.
