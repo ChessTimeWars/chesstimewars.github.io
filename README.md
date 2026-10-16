@@ -2,6 +2,21 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Android Online Matching - October 16, 2026
+
+- Owner approved Android-only wording for optional automatic opponent matching
+  alongside friend invitations. Discloses private account/settings/request timing
+  and seven-day retry receipts, no public directory/contact upload/chat/location
+  matching, cancellation and expiration, and queue removal on account deletion.
+- Aligns deletion help with the simplified Delete Online Account control. Existing
+  private keys from older builds remain supported; no instructions to generate
+  a new key or disable online access through removed lobby buttons.
+- Seven secure deletion-tool tests and all HTML IDs/local references/fragments
+  pass. Apple privacy sections are unchanged byte-for-byte. No game source,
+  country availability, store certification or billing setting changed here.
+- Push publishes the existing Pages site; verify public content before claiming
+  this wording is live. Android public availability remains coming soon.
+
 ## App Store Launch - October 15, 2026
 
 - Owner confirmed launch; Apple's public US lookup also returned Chess: Time Wars,
