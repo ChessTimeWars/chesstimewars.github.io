@@ -2,6 +2,40 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Free Gameplay And Optional Support - November 3, 2026
+
+- Owner authorized updating and publishing the existing site, not a redesign.
+  Homepage, mode/video labels, search/social descriptions and shared footers
+  now explain that all modes, Infinity, difficulties and tutorials are free in
+  Apple 1.0.3 and later. Only optional ad removal and repeatable coffee support
+  remain; consumed tips do not restore or remove ads. Previous Pack owners keep
+  their verified ad-removal benefit. Prices/availability remain in the app.
+- Tutorial and ad-placement FAQs are version-aware: submitted iOS 1.0.4 is
+  awaiting review as of November 3, not advertised as already public. The
+  earlier iOS tutorial route remains documented. Android internal build 16
+  and online-only closed build 11 have distinct commerce/ad disclosures;
+  Android remains in closed testing with no promised public date or public
+  enrollment link. No multiplayer acceptance result is implied.
+- Privacy/deletion wording reflects optional consumable handling, local signed
+  ownership records and the combined test build. No data collection, retention
+  deadline, legal certification, country, store/backend or billing change.
+  Existing complaints, India privacy/support and secure-deletion controls are
+  preserved. A formerly unlinked deletion URL/email now uses the existing
+  wrapping link style, avoiding a one-pixel overflow at 320px.
+- Reused the exact approved borderless app icon, with a dated favicon query to
+  refresh browser caches. CSS, gameplay media, captions, credits, app-ads.txt,
+  deletion JavaScript and its seven mocked-request tests are unchanged.
+- Validation: all 18 content/link/asset and mocked-deletion tests pass with
+  Node 24. All four pages are checked at 320, 390, 768 and 1280px; restore,
+  optional-purchase and advertising FAQs expand at phone/desktop widths. No
+  real deletion, checkout, ad request or support message is part of this QA.
+- A default-branch push uses the existing GitHub Pages setup. Verify live HTML
+  and favicon hashes against the committed files before calling it published.
+  Publication evidence stays outside this public repository.
+
+Run the complete local checks with Node 24:
+`node --test Tests/*.test.mjs`.
+
 ## Android Online Matching - October 16, 2026
 
 - Owner approved Android-only wording for optional automatic opponent matching
@@ -108,7 +142,8 @@ Plain HTML/CSS; no dependencies, analytics, remote fonts, or build step. Serve l
 - Owner reviews privacy policy against the final SDK configuration and App Store privacy disclosures.
 - Keep the verified App Store download link current; do not imply availability in every country or announce an Android release before it is confirmed.
 - Screenshots are real development-build captures; refresh them when UI changes.
-- All upgrades stay inside Apple's in-app purchase flow, not on this website.
+- Optional ad removal and coffee tips stay inside the app's platform purchase
+  flow, not on this website. Game modes do not require a purchase.
 - Artwork and screenshots are provided for this game's promotional site; no open-source license is granted to game assets.
 
 ## Gameplay videos (October 6, 2026)
