@@ -2,6 +2,19 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Android Launch - November 15, 2026
+
+- The homepage and shared footers point players to the App Store and the public
+  Google Play listing. The Android link checks regional availability rather
+  than promising a public install before the listing appears.
+- Support, privacy, and deletion pages now describe the Android release app:
+  free modes, offline play without an account, optional adult online play,
+  purchases through Google Play, and ads limited to eligible screens and
+  completed matches. They no longer describe testing tracks, sample ads or
+  simulated checkout. Existing privacy request and secure deletion routes remain.
+- This is a website update only; it does not change Google Play declarations,
+  rollout status, or countries.
+
 ## Free Gameplay And Optional Support - November 3, 2026
 
 - Owner authorized updating and publishing the existing site, not a redesign.

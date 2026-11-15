@@ -17,22 +17,30 @@ test('all six mode and gameplay-video labels describe free play', () => {
   assert.match(home, /In Classic, checkmate on any board wins/);
 });
 
-test('search and social copy identify free modes and the closed Android test', () => {
+test('search and social copy identify free play across both platforms', () => {
   assert.match(home, /<title>Chess: Time Wars \| All Game Modes Free<\/title>/);
   for (const attribute of ['name="description"', 'property="og:description"']) {
     const tag = home.match(new RegExp(`<meta ${attribute} content="([^"]+)"`));
     assert.ok(tag);
     assert.match(tag[1], /All rulesets, Infinity and difficulties included/);
-    assert.match(tag[1], /Android in closed testing/);
+    assert.match(tag[1], /iPhone, iPad and Android/);
   }
 });
 
-test('shared footers offer optional support, not paid game upgrades', () => {
+test('the Android link goes to the public Play listing without promising availability', () => {
+  assert.match(home, /id="download"/);
+  assert.match(home, /href="https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.chesstimewars\.android">Check Google Play availability/);
+  assert.match(home, /The public Android listing may not appear until Google Play availability is set for your country or region/);
+  assert.match(home, /href="https:\/\/apps\.apple\.com\/app\/chess-time-wars\/id6818296008">Download on the App Store/);
+  assert.match(support, /href="\.\/#download">Google Play availability link/);
+});
+
+test('shared footers identify free play and regional store availability', () => {
   for (const [name, html] of Object.entries(pages)) {
     const footer = html.slice(html.indexOf('<footer>'));
-    assert.match(footer, /All game modes are free in Apple version 1\.0\.3 and later/, name);
-    assert.match(footer, /Optional ad removal and coffee tips/, name);
-    assert.match(footer, /Android is in closed testing; public release is coming soon/, name);
+    assert.match(footer, /All game modes are free/, name);
+    assert.match(footer, /href="\.\/#download">iPhone, iPad &amp; Android downloads/, name);
+    assert.match(footer, /Store availability varies by country or region/, name);
     assert.doesNotMatch(footer, /Upgrades for the Apple version|In development/, name);
     assert.match(html, /href="assets\/icon\.png\?v=20261103-free-game"/, name);
   }
@@ -44,44 +52,46 @@ test('support distinguishes free modes, durable ad removal and consumable tips',
   assert.match(support, /previous Complete Pack owners retain ad removal/);
   assert.match(support, /consumed tips are not restored/);
   assert.match(support, /no gameplay features, subscription, currency or ad-removal benefit/);
+  assert.match(support, /Restore Google Play Purchases/);
 });
 
-test('tutorial instructions distinguish pending iOS 1.0.4 from released clients', () => {
-  assert.match(support, /iOS 1\.0\.4 or later/);
+test('tutorial instructions explain the current route on both platforms', () => {
   assert.match(support, /Start &gt; Rules of Time &gt; Full Tutorial/);
-  assert.match(support, /awaiting App Review as of November 3, 2026/);
-  assert.match(support, /iOS 1\.0\.3 or earlier/);
-  assert.match(support, /Android internal build 16/);
   assert.match(support, /Start &gt; Choose Your Rules &gt; Full Tutorial/);
 });
 
-test('banner and post-match disclosures are version scoped and preserve ad-free play', () => {
-  assert.match(privacy, /submitted <strong>iOS 1\.0\.4 update<\/strong>, once available/);
+test('both platforms describe safe-screen banners, post-match ads and verified ad removal', () => {
+  assert.match(privacy, /Banners may appear on Home, in the pre-match lobby and on completed-match Results/);
   assert.match(privacy, /minimum three-minute gap between full-screen ads/);
   assert.match(privacy, /Active games and tutorials are ad-free/);
   assert.match(privacy, /both banners and full-screen ads after ownership is verified/);
-  assert.match(support, /not a claim that the pending update is already public/);
+  assert.match(support, /Active games, tutorials and partial Infinity results stay ad-free/);
+  assert.match(support, /at least three minutes between full-screen ads/);
 });
 
-test('Android disclosures separate offline, online-only and combined test builds', () => {
-  assert.match(privacy, /closed-test build 11 includes optional online play but no commerce SDKs/);
-  assert.match(privacy, /internal build 16 combines optional online play/);
-  assert.match(privacy, /sample ad units, not revenue units/);
-  assert.match(privacy, /Full-screen ad breaks occur only after completed whole matches/);
-  assert.match(privacy, /Younger and unknown-age testers remain offline for these optional tests/);
-  assert.match(privacy, /commerce opt-in does not enable it/);
+test('Android disclosures separate offline play, optional purchases and ads, and adult online play', () => {
+  assert.match(privacy, /computer play on Android does not require a separate game account/);
+  assert.match(privacy, /Google Play purchases and Google AdMob advertising are available only for players who select the adult age group/);
+  assert.match(privacy, /Younger players and players who have not selected an age group can play offline without app-initiated requests/);
+  assert.match(privacy, /checks applicable regional privacy choices before ad requests/);
+  assert.match(privacy, /Optional online play separately requires the online notice and explicit Google sign-in/);
+  assert.match(privacy, /after a completed whole match, with at least three minutes between full-screen ads/);
+  assert.match(privacy, /unknown Play ownership fails closed/);
+  assert.match(support, /choose a ruleset, then tap Play Online/);
 });
 
 test('purchase privacy covers repeat consumption without making tips permanent ownership', () => {
   assert.match(privacy, /Coffee tips are verified and consumed with Google so they can be repeated/);
   assert.match(privacy, /consumed tips do not become permanent ad-removal ownership or restorable entitlements/);
-  assert.match(privacy, /Beta enrollment alone does not make a transaction free/);
+  assert.match(privacy, /You must choose an item and confirm any charge through Google Play/);
   assert.match(pages['account-deletion.html'], /deleting game data does not refund a tip/);
 });
 
 test('public pages do not publish private test enrollment or add checkout or ad scripts', () => {
   for (const [name, html] of Object.entries(pages)) {
-    assert.doesNotMatch(html, /play\.google\.com\/apps\/internaltest|testers-community@|<form\b|<iframe\b/, name);
+    const publicCopy = html.replace(/<[^>]*>/g, ' ');
+    assert.doesNotMatch(publicCopy, /\bbeta\b|\bclosed.testing\b|\btest ads\b|\binternal (?:build|testing)\b|\bawaiting App Review\b/i, name);
+    assert.doesNotMatch(html, /play\.google\.com\/apps\/(?:internaltest|testing)|testers-community@|<form\b|<iframe\b/, name);
     const sources = [...html.matchAll(/<script\b[^>]*src="([^"]+)"/g)].map(match => match[1]);
     assert.deepEqual(sources, name === 'account-deletion.html' ? ['external-deletion.js?v=20261016'] : [], name);
   }
