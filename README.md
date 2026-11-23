@@ -2,6 +2,15 @@
 
 Public information, support, and privacy pages only. No game source, keys, payment forms, or external upgrade sales.
 
+## Google Play Available - November 23, 2026
+
+- Verified Production 19 (1.0.0) at 100% rollout, with no unpublished changes,
+  and the public US Google Play listing displaying the approved description.
+- Homepage and support links now say Download on Google Play and link directly
+  to the public listing. Removed the pre-launch availability notice while
+  preserving country/region qualifications and the existing App Store links.
+- No store, country, tester, server, billing, or advertising configuration changes.
+
 ## Android Launch - November 15, 2026
 
 - The homepage and shared footers point players to the App Store and the public

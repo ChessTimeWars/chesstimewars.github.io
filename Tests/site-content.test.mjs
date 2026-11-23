@@ -27,12 +27,20 @@ test('search and social copy identify free play across both platforms', () => {
   }
 });
 
-test('the Android link goes to the public Play listing without promising availability', () => {
+test('Android download links identify the live public Play listing', () => {
   assert.match(home, /id="download"/);
-  assert.match(home, /href="https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.chesstimewars\.android">Check Google Play availability/);
-  assert.match(home, /The public Android listing may not appear until Google Play availability is set for your country or region/);
+  const playLinks = [...home.matchAll(/<a class="[^"]*google-play-link[^"]*" href="([^"]+)">Download on Google Play/g)];
+  assert.equal(playLinks.length, 2);
+  for (const [, href] of playLinks) {
+    assert.equal(href, 'https://play.google.com/store/apps/details?id=com.chesstimewars.android');
+  }
+  assert.match(home, /IPHONE, IPAD &amp; ANDROID \/ AVAILABLE NOW/);
+  assert.match(home, /Availability varies by country or region/);
   assert.match(home, /href="https:\/\/apps\.apple\.com\/app\/chess-time-wars\/id6818296008">Download on the App Store/);
-  assert.match(support, /href="\.\/#download">Google Play availability link/);
+  assert.match(support, /href="https:\/\/play\.google\.com\/store\/apps\/details\?id=com\.chesstimewars\.android">download Chess: Time Wars on Google Play/);
+  for (const html of [home, support]) {
+    assert.doesNotMatch(html, /Check Google Play availability|The public (?:Android|Play) listing may not appear/);
+  }
 });
 
 test('shared footers identify free play and regional store availability', () => {
